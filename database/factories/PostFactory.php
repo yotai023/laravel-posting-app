@@ -22,7 +22,13 @@ class PostFactory extends Factory
         return [
             'title' => fake()->unique()->randomNumber(5, true), 
             'content' => fake()->company(),
-            'user_id' => User::inRandomOrder()->first()->id,
+            'user_id' => function() {
+            return User::factory()->create()->id;
+        },
         ];
+        
+
     }
+
+    
 }

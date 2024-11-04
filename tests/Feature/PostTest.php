@@ -6,7 +6,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\User;
- use App\Models\Post;
+use App\Models\Post;
+
 
 class PostTest extends TestCase
 {
