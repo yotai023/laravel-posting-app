@@ -18,15 +18,20 @@ class PostFactory extends Factory
     public function definition(): array
     {
 
-        
-        return [
+       /* return [
             'title' => fake()->unique()->randomNumber(5, true), 
             'content' => fake()->company(),
             'user_id' => function() {
             return User::factory()->create()->id;
         },
         ];
+        */
         
+        return [
+            'user_id' => 6, 
+            'title' => fake()->realText(20, 5),
+            'content' => fake()->realText(200, 5)
+       ];
 
     }
 
