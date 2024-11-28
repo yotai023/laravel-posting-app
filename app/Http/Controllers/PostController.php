@@ -15,7 +15,7 @@ class PostController extends Controller
     {
         $posts = Auth::user()
             ->posts()
-            ->orderBy('created_at', 'desc') // 使用 'asc' 表示升序
+            ->orderBy('updated_at', 'asc') 
             ->get();
 
         return view('posts.index', compact('posts'));
