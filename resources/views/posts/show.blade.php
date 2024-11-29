@@ -22,7 +22,7 @@
             <div class="d-flex">
                 <a href="{{ route('posts.edit', $post) }}" class="btn btn-outline-primary d-block me-1">編集</a>
 
-                <form action="{{ route('posts.destroy', $post) }}" method="POST" onsubmit="return confirm('本当に削除してもよろしいですか？');">
+                <form method="POST" action="{{ route('posts.destroy', $post) }}" onsubmit="return confirm('本当に削除してもよろしいですか？');">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-outline-danger">削除</button>

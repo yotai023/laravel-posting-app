@@ -17,7 +17,7 @@
          <a href="{{ route('posts.index') }}" class="text-decoration-none">&lt; 戻る</a>
      </div>
  
-     <form action="{{ route('posts.update', $post) }}" method="POST">
+     <form method="POST" action="{{ route('posts.update', $post) }}">
          @csrf
          @method('PATCH')
          <div class="form-group mb-3">
